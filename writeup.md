@@ -9,13 +9,13 @@ The goals of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/solidWhiteRight.jpg "HSV space"
-[image2]: ./examples/grayscale.jpg "Grayscale"
-[image3]: ./examples/grayscale.jpg "Gaussian blur"
-[image4]: ./examples/grayscale.jpg "Canny"
-[image5]: ./examples/grayscale.jpg "Hough"
-[image6]: ./examples/grayscale.jpg "Roi"
-[image7]: ./examples/grayscale.jpg "Final"
+[image1]: ./examples/hslsolidWhiteRight.jpg "HSV space"
+[image2]: ./examples/graysolidWhiteRight.jpg "Grayscale"
+[image3]: ./examples/blursolidWhiteRight.jpg "Gaussian blur"
+[image4]: ./examples/cannysolidWhiteRight.jpg "Canny"
+[image5]: ./examples/houghsolidWhiteRight.jpg "Hough"
+[image6]: ./examples/roisolidWhiteRight.jpg "Roi"
+[image7]: ./examples/finalsolidWhiteRight.jpg "Final"
 
 
 ---
@@ -27,7 +27,12 @@ My pipeline consisted of 5 steps. First, I converted the images to HSV color spa
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by removing the line segments that are outside the region of interest then I separate the line segments into two arrays based on the slope of the lines - left_lines are the ones with a negative slope and right_lines the ones with a positive slope. At first I thought that a slope can go up to infinite but considering that the cartesian space of an image is formed of integer numbers - the biggesst/smallest value of the slope can not be bigger/smaller than the height of the image. Then I get the average slope from each array and use it together with the average intercept to draw the lane lines.  
 
 ![alt text][image1]
-![alt text][image1]
+![alt text][image2]
+![alt text][image3]
+![alt text][image4]
+![alt text][image5]
+![alt text][image6]
+![alt text][image7]
 
 
 ### 2. Shortcomings
